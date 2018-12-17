@@ -1,0 +1,13 @@
+# Section 11 - Lab 1 - Remote Command Runner
+
+@startuml
+actor User
+autonumber
+User -> Client : starts Client to run ls cmd
+Client -> Server : {Name:"ls", Args: ["-l", "/tmp"]}
+Server -> Server : exec.Cmd(Name, Args...)
+Client --> Server : cmd input
+Server --> Client : cmd output
+Server -> Server : wait for cmd
+Server -> Client : close connection
+@enduml
