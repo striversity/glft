@@ -43,7 +43,7 @@ rune        alias for int32
 
 const (
 	pi               float32 = 2.14
-	secondsInHour    uint8   = 60
+	secondsInHour    uint16  = 3600
 	hoursInDay       uint8   = 24
 	favoriteLanguage         = "golang"
 	isLoggingEnabled         = true // if you plan to change logging dynamcially, then this would be 'var'
